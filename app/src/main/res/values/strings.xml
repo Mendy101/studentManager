@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">StudentManager</string>
+    <string name="name">Name</string>
+    <string name="save">SAVE</string>
+    <string name="delete">DELETE</string>
+    <string name="cancel">CANCEL</string>
+    <string name="button">Button</string>
+    <string name="addrees">addrees</string>
+    <string name="id">id:</string>
+    <string name="phone">phone:</string>
+    <string name="new_student">New Student</string>
+</resources>
