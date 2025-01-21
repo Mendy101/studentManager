@@ -15,25 +15,41 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="320dp"
+            android:layout_height="53dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Student details "
+            android:textSize="34sp"
+            tools:layout_editor_absoluteX="62dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+
+    </androidx.appcompat.widget.Toolbar>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/details_edit_btn"
         android:layout_width="135dp"
         android:layout_height="65dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:backgroundTint="#A7A3A7"
         android:text="EDIT"
         android:textColor="#070707"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="275dp"
-        tools:layout_editor_absoluteY="661dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="401dp"
         android:layout_height="359dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar2">
 
@@ -41,8 +57,11 @@
             android:id="@+id/imageView"
             android:layout_width="102dp"
             android:layout_height="107dp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/pic"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
@@ -92,17 +111,18 @@
             android:layout_marginEnd="32dp"
             android:text="addrees: "
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/Add_checkBox"
+            app:layout_constraintBottom_toTopOf="@+id/details_checkBox"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/detals_phone" />
 
         <CheckBox
-            android:id="@+id/Add_checkBox"
+            android:id="@+id/details_checkBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
+            android:clickable="false"
             android:text="chekcd"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"

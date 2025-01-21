@@ -21,7 +21,11 @@ class ViewHolder(rowView: View, listier: onClickListier?) : RecyclerView.ViewHol
         this.checkBox = rowView.findViewById(R.id.Row_chekbox)
 
         rowView.setOnClickListener {
-            listier?.onItemClick(_student)
+            this.checkBox?.apply {
+                (tag as? Int)?.let {
+                    tag-> listier?.onItemClick(tag)
+                }
+            }
         }
     }
 

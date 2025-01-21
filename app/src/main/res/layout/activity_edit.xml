@@ -16,12 +16,24 @@
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="320dp"
+            android:layout_height="53dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Edit Student"
+            android:textSize="34sp"
+            tools:layout_editor_absoluteX="62dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="415dp"
-        android:layout_height="444dp"
-        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,8 +41,8 @@
 
         <TextView
             android:id="@+id/detals_name"
-            android:layout_width="76dp"
-            android:layout_height="24dp"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
             android:text="name: "
             android:textSize="20sp"
@@ -39,22 +51,23 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <EditText
-            android:id="@+id/Add_name"
+            android:id="@+id/edit_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
             android:ems="10"
-            android:fontFamily="sans-serif"
             android:inputType="text"
-            android:text="Name"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/Add_id"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            tools:layout_editor_absoluteX="154dp" />
+            app:layout_constraintBottom_toTopOf="@+id/edit_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.573"
+            app:layout_constraintStart_toEndOf="@+id/detals_name"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <TextView
             android:id="@+id/detals_id"
-            android:layout_width="77dp"
-            android:layout_height="31dp"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:text="id:"
             android:textSize="20sp"
@@ -63,21 +76,22 @@
             app:layout_constraintTop_toBottomOf="@+id/detals_name" />
 
         <EditText
-            android:id="@+id/Add_id"
-            android:layout_width="209dp"
-            android:layout_height="26dp"
-            android:layout_marginStart="50dp"
+            android:id="@+id/edit_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
             android:ems="10"
             android:inputType="number"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/Add_phone"
+            app:layout_constraintBottom_toTopOf="@+id/edit_phone"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/detals_id"
-            app:layout_constraintTop_toBottomOf="@+id/Add_name" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_name" />
 
         <TextView
             android:id="@+id/detals_phone"
             android:layout_width="75dp"
-            android:layout_height="27dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:text="phone"
             android:textSize="20sp"
@@ -86,42 +100,45 @@
             app:layout_constraintTop_toBottomOf="@+id/detals_id" />
 
         <EditText
-            android:id="@+id/Add_phone"
-            android:layout_width="210dp"
-            android:layout_height="28dp"
-            android:layout_marginStart="50dp"
+            android:id="@+id/edit_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
             android:ems="10"
             android:inputType="phone"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/Add_addres"
+            app:layout_constraintBottom_toTopOf="@+id/edit_addres"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/detals_phone"
-            app:layout_constraintTop_toBottomOf="@+id/Add_id" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_id" />
 
         <TextView
             android:id="@+id/detals_address"
-            android:layout_width="0dp"
+            android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:text="addrees"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/Add_checkBox"
+            app:layout_constraintBottom_toTopOf="@+id/edit_checkBox"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/detals_phone" />
 
         <EditText
-            android:id="@+id/Add_addres"
-            android:layout_width="214dp"
-            android:layout_height="41dp"
+            android:id="@+id/edit_addres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
             android:ems="10"
             android:inputType="text"
-            android:text="@string/name"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/Add_checkBox"
-            app:layout_constraintTop_toBottomOf="@+id/Add_phone"
-            tools:layout_editor_absoluteX="154dp" />
+            app:layout_constraintBottom_toTopOf="@+id/edit_checkBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.555"
+            app:layout_constraintStart_toEndOf="@+id/detals_address"
+            app:layout_constraintTop_toBottomOf="@+id/edit_phone" />
 
         <CheckBox
-            android:id="@+id/Add_checkBox"
+            android:id="@+id/edit_checkBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -138,48 +155,54 @@
             android:id="@+id/imageView"
             android:layout_width="122dp"
             android:layout_height="94dp"
-            tools:layout_editor_absoluteX="43dp"
-            tools:layout_editor_absoluteY="16dp"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="224dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/pic" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/Edit_cancelBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#EBA09DA0"
         android:text="@string/cancel"
         android:textColor="#000000"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Edit_deleteBtn"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="659dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/Edit_deleteBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#EBA09DA0"
         android:text="@string/delete"
         android:textColor="#000000"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Edit_saveBtn"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/Edit_cancelBtn"
-        tools:layout_editor_absoluteY="659dp" />
+        app:layout_constraintStart_toEndOf="@+id/Edit_cancelBtn" />
 
     <Button
         android:id="@+id/Edit_saveBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#EBA09DA0"
         android:text="@string/save"
         android:textColor="#000000"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/Edit_deleteBtn"
-        tools:layout_editor_absoluteY="659dp" />
+        app:layout_constraintStart_toEndOf="@+id/Edit_deleteBtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>

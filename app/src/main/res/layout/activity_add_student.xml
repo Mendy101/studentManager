@@ -59,7 +59,7 @@
             android:ems="10"
             android:inputType="text"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/Add_id"
+            app:layout_constraintBottom_toTopOf="@+id/edit_id"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.573"
             app:layout_constraintStart_toEndOf="@+id/detals_name"
@@ -77,7 +77,7 @@
             app:layout_constraintTop_toBottomOf="@+id/detals_name" />
 
         <EditText
-            android:id="@+id/Add_id"
+            android:id="@+id/edit_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="36dp"
@@ -109,7 +109,7 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/Add_addres"
             app:layout_constraintStart_toEndOf="@+id/detals_phone"
-            app:layout_constraintTop_toBottomOf="@+id/Add_id" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_id" />
 
         <TextView
             android:id="@+id/detals_address"

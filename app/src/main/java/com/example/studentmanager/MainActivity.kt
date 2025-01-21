@@ -2,6 +2,7 @@ package com.example.studentmanager
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.icu.text.Transliterator.Position
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -34,11 +35,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val intent = Intent(this, DetailsActivity::class.java);
+        val intent = Intent(this, DetailsActivity::class.java)
         adapter?.listier = object : onClickListier {
-            override fun onItemClick(student: Student?) {
-                intent.putExtra("student",student)
-                startActivity(intent);
+            override fun onItemClick(position: Int) {
+                intent.putExtra("position",position)
+                startActivity(intent)
             }
 
         }

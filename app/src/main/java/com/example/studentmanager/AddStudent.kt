@@ -6,10 +6,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.studentmanager.Model.Model
 import com.example.studentmanager.Model.Student
 
@@ -26,7 +23,7 @@ class AddStudent : AppCompatActivity() {
 
     fun save(){
         val name:EditText=findViewById(R.id.Add_name)
-        val id:EditText=findViewById(R.id.Add_id)
+        val id:EditText=findViewById(R.id.edit_id)
         val phone:EditText=findViewById(R.id.Add_phone)
         val address:EditText=findViewById(R.id.Add_addres)
         val checkBox:CheckBox=findViewById(R.id.Add_checkBox)
