@@ -14,10 +14,10 @@ import com.example.studentmanager.Model.Model
 import com.example.studentmanager.Model.Student
 
 class EditActivity : AppCompatActivity() {
-    var name: EditText? = null
-    var id: EditText? = null
-    var phone: EditText? = null
-    var address: EditText? = null
+    lateinit var name: EditText
+    lateinit var id: EditText
+    lateinit var phone: EditText
+    lateinit  var address: EditText
     lateinit var checkBox: CheckBox
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,11 +64,17 @@ class EditActivity : AppCompatActivity() {
     }
 
     fun update(i: Int) {
+        if (name.text.isEmpty() || id.text.isEmpty() || phone.text.isEmpty() ) {
+            name.error="This field is required"
+            id.error="This field is required"
+            phone.error="This field is required"
+            return
+        }
         val student=Student(
-            name?.text.toString(),
-                    id?.text.toString().toInt(),
-                    phone?.text.toString().toInt(),
-                    address?.text.toString(),
+            name.text.toString(),
+                    id.text.toString().toInt(),
+                    phone.text.toString().toInt(),
+                    address.text.toString(),
                     checkBox.isChecked
         )
         Model.instance.editStudent(i,student)

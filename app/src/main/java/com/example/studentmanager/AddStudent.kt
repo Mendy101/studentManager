@@ -28,8 +28,10 @@ class AddStudent : AppCompatActivity() {
         val address:EditText=findViewById(R.id.Add_addres)
         val checkBox:CheckBox=findViewById(R.id.Add_checkBox)
 
-        if (name.text.isEmpty() || id.text.isEmpty() || phone.text.isEmpty() || address.text.isEmpty()) {
-            Log.d("save", "Please fill all fields")
+        if (name.text.isEmpty() || id.text.isEmpty() || phone.text.isEmpty() ) {
+            name.error="This field is required"
+            id.error="This field is required"
+            phone.error="This field is required"
             return
         }
         val student:Student=Student(name.text.toString(),id.text.toString().toInt(),
