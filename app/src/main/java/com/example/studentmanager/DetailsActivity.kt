@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.example.studentmanager.Model.Model
 import com.example.studentmanager.Model.Student
 
@@ -16,6 +17,7 @@ class DetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
+        window.statusBarColor = ContextCompat.getColor(this, R.color.silver)
         val i=intent.getIntExtra("position",-1)
         if(i!=-1){
        presentStudent(i)

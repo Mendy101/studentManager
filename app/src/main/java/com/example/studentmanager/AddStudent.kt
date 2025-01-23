@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.example.studentmanager.Model.Model
 import com.example.studentmanager.Model.Student
 
@@ -15,7 +16,7 @@ class AddStudent : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_student)
-
+        window.statusBarColor = ContextCompat.getColor(this, R.color.silver)
         findViewById<Button>(R.id.Add_cancel_btn).setOnClickListener{cancel()}
         findViewById<Button>(R.id.Add_save_btn).setOnClickListener{save()}
 
