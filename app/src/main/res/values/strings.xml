@@ -9,4 +9,12 @@
     <string name="id">id:</string>
     <string name="phone">phone:</string>
     <string name="new_student">New Student</string>
+    <string name="enter_a_full_name">enter a full name</string>
+    <string name="enter_your_id" />
+    <string name="enter_your_phone" />
+    <string name="enter_your_address" />
+    <string name="Enter_your_id">enter your id</string>
+    <string name="Enter_your_phone">enter your phone</string>
+    <string name="Enter_your_address">enter your address</string>
+    <string name="Enter_a_full_name">enter_a full name</string>
 </resources>
